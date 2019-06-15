@@ -1,0 +1,9 @@
+    $ wget -O - --post-file=login.txt --save-cookies=cookie.txt --keep-session-cookies 
+
+wget -O - --load-cookies=cookie.txt 
+
+
+wget -O - --save-cookies=cookie.txt --keep-session-cookies 
+wget -O - --load-cookies=cookie.txt
+
+--post-data="a=1&b=2"

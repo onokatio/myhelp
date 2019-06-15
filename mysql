@@ -1,0 +1,27 @@
+CREATE USER 'ユーザー名'@'localhost' IDENTIFIED BY 'パスワード'; ユーザー作成
+DROP USER 'ユーザー名'@'localhost';ユーザー削除
+GRANT ALL ON db.* TO user; 権限設定
+GRANT ALL privileges ON db.* TO user1@"192.168.3.%" identified by 'パスワード' with grant option; 外部からでもアクセス許可
+
+CREATE DATABASE db; データベース作成
+SHOW DATABASES; データベース一覧
+SHOW TABLES FROM db ; テーブル一覧
+CREATE TABLE db.table(カラム名 型,カラム名 型); テーブル作成
+ALTER TABLE db.table ADD (カラム名 型,カラム名 型...);カラム追加
+ALTER TABLE db.table DROP カラム名;カラム削除
+ALTER TABLE db.table MODIFY カラム名 型;
+DROP TABLE db.table;//テーブルさ駆除
+SELECT Host, User, Password FROM mysql.user; ユーザー一覧
+|=カラムの型===============|
+|       型          |内容  |
+|--------------------------|
+|   int             |数字  |
+|   varchar(文字数) |文字列|
+|==========================|
+INSERT INTO db.table (カラム名,カラム名...)  VALUES (データ,データ...); データ挿入
+SELECT * FROM db.table WHERE カラム名 LIKE '値'; 読み出し
+UPDATE db.table SET 変更するカラム = 値 WHERE  指定カラム = 値;
+DELETE FROM db.table WHERE k = d;
+
+
+by http://www.dbonline.jp/
